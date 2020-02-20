@@ -1,9 +1,9 @@
 // this creates a html p element and then adds a string to it
-var timeStamp = document.createElement("p");
-timeStamp.append("The current time is: ", Date());
+var footerContent = document.createElement("p");
+footerContent.append("The current time is: ", Date());
 
 // this disiplays the previously created element on the page
-document.getElementById("footer").appendChild(timeStamp);
+document.getElementById("footer").appendChild(footerContent);
 
 // this creates a html p element and then adds a string to it
 var mainContent = document.createElement("p");

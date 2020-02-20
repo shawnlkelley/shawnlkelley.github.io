@@ -1,5 +1,5 @@
 body {
-  background-color: #090808;
+  background-color: #111111;
   color: #62D347;
   margin-left: 3%;
   margin-right: 3%;
@@ -8,9 +8,36 @@ body {
 }
 
 h1  {
-
+  font-size: 48px
 }
 
 p {
+  font-size: 18px
+}
 
+
+
+.page {
+  display: grid;
+  grid-template-areas:
+    "head head"
+    "main output"
+    "footer footer";
+}
+
+.grid-header {
+  grid-area: head;
+
+}
+
+.grid-main {
+  grid-area: main;
+}
+
+.grid-output {
+  grid-area: output;
+}
+
+.grid-footer {
+  grid-area: footer;
 }

@@ -15,10 +15,20 @@ p {
   font-size: 18px
 }
 
+select {
+  background-color: #222222;
+  color: #62D347;
+  border-color: #333333;
+  width: auto;
+  font-size: 18px
+}
+
+
 
 
 .page {
   display: grid;
+  grid-column: 1fr 1fr;
   grid-template-areas:
     "head head"
     "main output"

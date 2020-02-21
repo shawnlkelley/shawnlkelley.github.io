@@ -1,1 +1,8 @@
 #this is the main data page that will dictate the structure of your webpage and output of of data
+
+
+content = {
+  domainNames {
+    
+  }
+}

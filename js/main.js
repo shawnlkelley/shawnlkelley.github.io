@@ -1,10 +1,10 @@
 
 
 // function for creating a selectable list
-function createList(listArray) {
+function createList(listArray, listId) {
   // creates list element
   var dropDown = document.createElement("select");
-
+  dropDown.setAttribute("id",listId);
 
   // adds list items to the list
   for (index = 0; index < listArray.length; index++) {
@@ -34,7 +34,7 @@ let domainList = ["domain1.com", "domain2.com", "domain3.com"];
 
 var domainText = document.createElement("p");
 domainText.append("Choose a domain: ");
-domainText.append(createList(domainList));
+domainText.append(createList(domainList, "domain-list"));
 
 
 //mainContent.append(domainDrop);

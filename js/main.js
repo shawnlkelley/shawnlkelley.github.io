@@ -21,7 +21,7 @@ document.getElementById("app").appendChild(mainForm);
 
 // this creates a html p element and then adds a string to it
 var outputContent = document.createElement("p");
-outputContent.append("this is where output content goes");
+outputContent.append("you have chosen myapp.domain.com");
 
 
 // this disiplays the previously created element on the page

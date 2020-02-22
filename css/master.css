@@ -38,6 +38,7 @@ input {
     "head head"
     "main output"
     "footer footer";
+  grid-column-gap: 3%;
 }
 
 .grid-header {

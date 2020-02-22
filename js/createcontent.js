@@ -1,4 +1,7 @@
+
+//******************************************************************************
 // function for creating a selectable list
+//******************************************************************************
 function createList(listObj) {
   // creates list element
   var dropDown = document.createElement("select");
@@ -15,6 +18,10 @@ function createList(listObj) {
   return dropDown;
 }
 
+//******************************************************************************
+// makes a fillable text box
+//******************************************************************************
+
 function createText (textObj) {
 
   var textBox = document.createElement("input");
@@ -24,6 +31,10 @@ function createText (textObj) {
 
   return textBox;
 }
+
+//******************************************************************************
+// main function
+//******************************************************************************
 
 function createPageElement (elementContent) {
 //create p element for a new line

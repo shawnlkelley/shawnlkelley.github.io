@@ -21,6 +21,7 @@ select {
   border-color: #333333;
   width: auto;
   font-size: 18px;
+  padding: 2px;
 }
 
 input {
@@ -28,6 +29,7 @@ input {
   color: #62D347;
   border-color: #333333;
   font-size: 18px;
+  padding: 2px;
 }
 
 

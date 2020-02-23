@@ -2,21 +2,24 @@
   "hostnameObj": {
     "boxType": "textbox",
     "contentId": "hostname",
+    "defaultValue": "myapp",
     "contentText": "Hostname: "
   },
   "domainObj": {
     "boxType": "list",
     "contentId": "domain-list",
+    "defaultValue": "sub.domain.com",
     "contentText": "Domain: ",
     "listItems": [
-      "domain1.com",
-      "domain2.com",
-      "domain3.com"
+      "domain.com",
+      "sub.domain.com",
+      "sub2.domain.com"
     ]
   },
   "deviceObj": {
     "boxType": "list",
     "contentId": "device-list",
+    "defaultValue": "device1",
     "contentText": "Device: ",
     "listItems": [
       "Device1",
@@ -27,6 +30,7 @@
   "ipAddress": {
     "boxType": "textbox",
     "contentId": "IP address",
+    "defaultValue": "change me",
     "contentText": "IP address: "
   }
 }

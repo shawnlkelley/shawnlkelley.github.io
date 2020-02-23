@@ -1,4 +1,12 @@
 
+
+function createStorage(value) {
+  if (localStorage.getItem(value.contentId) != null) {
+    return;
+  } else {
+    localStorage.setItem(value.contentId, value.defaultValue);
+  }
+};
 //******************************************************************************
 // function for creating a selectable list
 //******************************************************************************
@@ -6,11 +14,14 @@ function createList(listObj) {
   // creates list element
   var dropDown = document.createElement("select");
   dropDown.setAttribute("id",listObj.contentId);
-
+  createStorage(listObj);
   // adds list items to the list
   for (index = 0; index < listObj.listItems.length; index++) {
     var listItem = document.createElement("option");
     listItem.setAttribute("value",listObj.listItems[index]);
+    if (listObj.listItems[index] == localStorage.getItem(listObj.contentId)) {
+      listItem.setAttribute("selected",true);
+    }
     listItem.append(listObj.listItems[index]);
     dropDown.append(listItem);
   }
@@ -28,7 +39,8 @@ function createText (textObj) {
   textBox.setAttribute("type", "text");
   textBox.setAttribute("id", textObj.contentId);
   textBox.setAttribute("name", textObj.contentId);
-
+  createStorage(textObj);
+  textBox.setAttribute("value", localStorage.getItem(textObj.contentId));
   return textBox;
 };
 
@@ -72,4 +84,9 @@ function contentLoop (mainObject, pageElement) {
       pageElement.append(createPageElement(mainObject[key]));
     }
   }
+  var submitButton = document.createElement("input");
+  submitButton.setAttribute("type", "submit");
+  submitButton.setAttribute("value","Submit");
+  submitButton.append("Submit");
+  pageElement.appendChild(submitButton);
 };

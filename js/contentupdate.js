@@ -14,10 +14,11 @@ function updateStorage (e) {
 function updateOutput () {
   var currentDomain = localStorage.getItem("domain-list");
   var currentHostname = localStorage.getItem("hostname");
-
+  var currentIP = localStorage.getItem("IP-address");
+  var currentDevice = localStorage.getItem("device-list");
   var text = document.createElement("p");
 
-  text.append(currentHostname, ".",currentDomain);
+  text.append(currentHostname, ".",currentDomain,"my ip is ",currentIP," and I am assigned to device: ",currentDevice);
 
   updateContent(outputContent, text);
 

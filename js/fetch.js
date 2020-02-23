@@ -8,6 +8,7 @@ function fetchJSONFile(path, callback) {
                 var data = JSON.parse(httpRequest.responseText);
                 if (callback) callback(data);
                 console.log("JSON fetched");
+                updateOutput();
             }
         }
     };

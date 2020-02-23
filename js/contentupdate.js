@@ -19,8 +19,13 @@ function updateOutput () {
   var text = document.createElement("p");
 
   text.append(currentHostname, ".",currentDomain," my ip is ",currentIP," and I am assigned to device: ",currentDevice);
+  //var textStr = JSON.stringify(text);
+  //console.log(textStr);
+  //var item = outputContent.childNodes[0]
+  //console.log("the next child is ",item.childNodes[0].nextSibling[0]);
 
   updateContent(outputContent, text);
+  //outputContent.innerHTML = text;
 
 }
 
@@ -34,8 +39,8 @@ function createListener() {
                   updateStorage(this.childNodes[i].lastChild);
               };
           };
-          //e.preventDefault();
-          //updateOutput();
+          e.preventDefault();
+          updateOutput();
       },
     false);
 }

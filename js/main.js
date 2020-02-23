@@ -16,11 +16,6 @@ fetchJSONFile(path, function(formContent){
 });
 
 updateContent(mainContent, mainForm);
-
-// this creates a html p element and then adds a string to it
-var outputPlaceHolder = document.createElement("P");
-outputPlaceHolder.append("when a user enters a hostname such as myapp on the right and picks a domain this side should update to say you have chosen myapp.domain.com");
-
 // this disiplays the previously created element on the page
 // this creates a html p element and then adds a string to it
 var footerPlaceHolder = document.createElement("P");

@@ -2,6 +2,12 @@
 // this creates a html p element and then adds a string to it
 var mainContent = document.createElement("p");
 // replace with json call to json/data.json
+
+
+
+
+
+
 var formContent = data;
 var mainForm = document.createElement("form");
 

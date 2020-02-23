@@ -18,7 +18,7 @@ function updateOutput () {
   var currentDevice = localStorage.getItem("device-list");
   var text = document.createElement("p");
 
-  text.append(currentHostname, ".",currentDomain,"my ip is ",currentIP," and I am assigned to device: ",currentDevice);
+  text.append(currentHostname, ".",currentDomain," my ip is ",currentIP," and I am assigned to device: ",currentDevice);
 
   updateContent(outputContent, text);
 

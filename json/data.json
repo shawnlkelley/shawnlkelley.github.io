@@ -1,10 +1,10 @@
-[{
-  "hostnameObj": [{
+{
+  "hostnameObj": {
     "boxType": "textbox",
     "contentId": "hostname",
     "contentText": "Hostname: "
-  }],
-  "domainObj": [{
+  },
+  "domainObj": {
     "boxType": "list",
     "contentId": "domain-list",
     "contentText": "Domain: ",
@@ -13,8 +13,8 @@
       "domain2.com",
       "domain3.com"
     ]
-  }],
-  "deviceObj": [{
+  },
+  "deviceObj": {
     "boxType": "list",
     "contentId": "device-list",
     "contentText": "Device: ",
@@ -23,5 +23,10 @@
       "Device2",
       "Device3"
     ]
-  }]
-}]
+  },
+  "ipAddress": {
+    "boxType": "textbox",
+    "contentId": "IP address",
+    "contentText": "IP address: "
+  }
+}

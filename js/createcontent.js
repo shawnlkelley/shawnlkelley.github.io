@@ -16,7 +16,7 @@ function createList(listObj) {
   }
 // returns completed drop down list
   return dropDown;
-}
+};
 
 //******************************************************************************
 // makes a fillable text box
@@ -30,7 +30,7 @@ function createText (textObj) {
   textBox.setAttribute("name", textObj.contentId);
 
   return textBox;
-}
+};
 
 //******************************************************************************
 // main function
@@ -59,4 +59,17 @@ if (elementContent.boxType == "list") {
 
 //document.getElementById("app").appendChild(contentToAdd);
 return contentToAdd;
-}
+};
+
+//******************************************************************************
+// content creation loop, loads in object and page element and then populates them
+//******************************************************************************
+
+function contentLoop (mainObject, pageElement) {
+  for (var key in mainObject) {
+    //console.log("creating some boxes");
+    if (mainObject.hasOwnProperty(key)) {
+      pageElement.append(createPageElement(mainObject[key]));
+    }
+  }
+};

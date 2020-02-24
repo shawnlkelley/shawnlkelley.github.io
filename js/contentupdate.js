@@ -15,12 +15,12 @@ function createListener() {
   document.getElementById('event-listener').addEventListener("submit", function(e) {
           //console.log("event triggered");
           for (var i = 0; i < this.childNodes.length; i++) {
-            //console.log(this.childNodes[i].lastChild);
-              if (this.childNodes[i].lastChild.value !== "") {
-                  updateStorage(this.childNodes[i].lastChild);
+            //console.log(this.childNodes[i]);
+              if (this.childNodes[i].value !== undefined) {
+                  updateStorage(this.childNodes[i]);
               };
           };
-          e.preventDefault();
+          event.preventDefault();
           outputContent.location.reload();
       },
     false);

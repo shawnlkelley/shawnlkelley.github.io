@@ -2,8 +2,8 @@
   "ticketObj": {
     "boxType": "textbox",
     "contentId": "ticket",
-    "defaultValue": "ticket",
-    "contentText": "Ticket: "
+    "defaultValue": "",
+    "contentText": "Ticket#: "
   },
   "deviceObj": {
     "boxType": "list",

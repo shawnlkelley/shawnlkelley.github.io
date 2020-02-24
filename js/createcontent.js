@@ -48,9 +48,9 @@ function createText (textObj) {
 // main function
 //******************************************************************************
 
-function createPageElement (elementContent) {
+function createPageElement (elementContent, pageElement) {
 //create p element for a new line
-var contentToAdd = document.createElement("p");
+var contentToAdd = pageElement;
 var contentBreak = document.createElement("BR");
 
 //creates label element, sets the for attribute, adds texts to it and
@@ -58,19 +58,22 @@ var contentBreak = document.createElement("BR");
 var contentLabel = document.createElement("label");
 contentLabel.setAttribute("for", elementContent.contentId);
 contentLabel.append(elementContent.contentText);
-contentToAdd.appendChild(contentLabel);
+
 
 //determines what type of input to create
 if (elementContent.boxType == "list") {
   //calls function to create a drop down element
-  contentToAdd.appendChild(createList(elementContent));
+  contentLabel.appendChild(createList(elementContent));
 }else if (elementContent.boxType == "textbox") {
   // calls function to create a text box
-  contentToAdd.appendChild(createText(elementContent));
+  contentLabel.appendChild(createText(elementContent));
 }
 
+contentToAdd.appendChild(contentLabel);
+//if (elementContent.breakAfter == "true") {
+  contentToAdd.appendChild(contentBreak);
+//}
 //document.getElementById("app").appendChild(contentToAdd);
-return contentToAdd;
 };
 
 //******************************************************************************
@@ -78,11 +81,11 @@ return contentToAdd;
 //******************************************************************************
 
 function contentLoop (mainObject, pageElement) {
-  localStorage.setItem("contentObject", JSON.stringify(mainObject));
+  localStorage.setItem("formTemplate", JSON.stringify(mainObject));
   for (var key in mainObject) {
     //console.log("creating some boxes");
     if (mainObject.hasOwnProperty(key)) {
-      pageElement.append(createPageElement(mainObject[key]));
+      createPageElement(mainObject[key], pageElement);
     }
   }
   var submitButton = document.createElement("input");

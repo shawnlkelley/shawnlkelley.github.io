@@ -78,6 +78,7 @@ return contentToAdd;
 //******************************************************************************
 
 function contentLoop (mainObject, pageElement) {
+  localStorage.setItem("contentObject", JSON.stringify(mainObject));
   for (var key in mainObject) {
     //console.log("creating some boxes");
     if (mainObject.hasOwnProperty(key)) {

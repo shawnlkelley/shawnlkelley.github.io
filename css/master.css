@@ -1,9 +1,7 @@
 body {
   background-color: #111111;
   color: #62D347;
-  margin-left: 3%;
-  margin-right: 3%;
-  margin-top: 3%;
+  margin: 3% 3% 3% 3%;
   font-family: arial;
 }
 
@@ -19,7 +17,6 @@ select {
   background-color: #222222;
   color: #62D347;
   border-color: #333333;
-  width: auto;
   font-size: 18px;
   padding: 2px;
 }
@@ -32,6 +29,17 @@ input {
   padding: 2px;
 }
 
+iframe.output-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+}
+
+iframe.input-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+}
 
 .page {
   display: grid;
@@ -40,7 +48,7 @@ input {
     "head head"
     "main output"
     "footer footer";
-  grid-column-gap: 3%;
+  grid-column-gap: 1%;
 
 }
 

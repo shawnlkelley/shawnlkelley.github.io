@@ -1,0 +1,30 @@
+body {
+  background-color: #111111;
+  color: #62D347;
+  margin: 3% 3% 3% 3%;
+  font-family: arial;
+}
+
+h1  {
+  font-size: 48px;
+}
+
+p {
+  font-size: 18px;
+}
+
+select {
+  background-color: #222222;
+  color: #62D347;
+  border-color: #333333;
+  font-size: 18px;
+  padding: 2px;
+}
+
+input {
+  background-color: #222222;
+  color: #62D347;
+  border-color: #333333;
+  font-size: 18px;
+  padding: 2px;
+}

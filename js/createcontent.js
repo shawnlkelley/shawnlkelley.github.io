@@ -81,7 +81,7 @@ contentToAdd.appendChild(contentLabel);
 //******************************************************************************
 
 function contentLoop (mainObject, pageElement) {
-  localStorage.setItem("formTemplate", JSON.stringify(mainObject));
+  //localStorage.setItem("formTemplate", JSON.stringify(mainObject));
   for (var key in mainObject) {
     //console.log("creating some boxes");
     if (mainObject.hasOwnProperty(key)) {
